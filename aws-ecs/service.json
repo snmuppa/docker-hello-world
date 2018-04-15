@@ -1,0 +1,14 @@
+{
+  "serviceName": "helloworld-fargate-service",
+  "launchType": "FARGATE",
+  "cluster": "hello_world-test",
+  "taskDefinition": "helloworld-task",
+  "desiredCount": 1,
+  "networkConfiguration": {
+    "awsvpcConfiguration": {
+      "subnets": ["subnet-33a3eb78", "subnet-a84fc9f5"],
+      "securityGroups": ["sg-f317e987"],
+      "assignPublicIp": "ENABLED"
+    }
+  }
+}

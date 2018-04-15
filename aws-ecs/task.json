@@ -1,0 +1,22 @@
+{
+  "family": "helloworld-task",
+  "networkMode": "awsvpc",
+  "cpu": "1 vCPU",
+  "memory": "2GB",
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "taskRoleArn": "arn:aws:iam::191014931684:role/EcsTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::191014931684:role/EcsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "name": "helloworld-container",
+      "image": "191014931684.dkr.ecr.us-east-1.amazonaws.com/hello-world:1",
+      "cpu": 512,
+      "memory": 512,
+      "portMappings": [{
+        "containerPort": 9080
+      }]
+    }
+  ]
+}
